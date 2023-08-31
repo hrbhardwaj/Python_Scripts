@@ -1,0 +1,15 @@
+## Working with Git Repositories:
+==================================================================
+import subprocess
+
+def git_clone(repo_url, destination_dir):
+    subprocess.run(["git", "clone", repo_url, destination_dir])
+
+def git_pull(repo_dir):
+    subprocess.run(["git", "-C", repo_dir, "pull"])
+
+# Example usage
+git_clone("https://github.com/myusername/myrepo.git", "./myrepo")
+git_pull("./myrepo")
+
+======================================================================
