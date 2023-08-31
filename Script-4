@@ -1,0 +1,15 @@
+Running Tests and Deployments:
+===========================================
+import subprocess
+
+def run_tests():
+    subprocess.run(["pytest", "--cov=myapp", "tests/"])
+
+def deploy_app():
+    subprocess.run(["ansible-playbook", "deploy.yaml"])
+
+# Example usage
+run_tests()
+deploy_app()
+
+============================================
