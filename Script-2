@@ -1,0 +1,12 @@
+## Interacting with Kubernetes via kubectl:
+
+import subprocess
+
+def apply_kubernetes_manifests(manifest_paths):
+    for path in manifest_paths:
+        subprocess.run(["kubectl", "apply", "-f", path])
+
+# Example usage
+apply_kubernetes_manifests(["./path/to/deploy.yaml", "./path/to/svc.yaml"])
+
+
