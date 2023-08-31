@@ -1,0 +1,15 @@
+## Automating Docker Commands:
+
+Phyon-Script
+
+import subprocess
+
+def build_docker_image(image_name, dockerfile_path):
+    subprocess.run(["docker", "build", "-t", image_name, dockerfile_path])
+
+def push_docker_image(image_name):
+    subprocess.run(["docker", "push", image_name])
+
+# Example usage
+build_docker_image("myapp:latest", "./path/to/Dockerfile")
+push_docker_image("myapp:latest")
