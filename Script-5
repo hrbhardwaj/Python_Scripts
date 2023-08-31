@@ -1,0 +1,16 @@
+## Handling Environment Variables:
+===================================================
+
+import os
+
+def get_secret_value(secret_name):
+    return os.environ.get(secret_name)
+
+def set_environment_variable(variable_name, value):
+    os.environ[variable_name] = value
+
+# Example usage
+db_password = get_secret_value("DB_PASSWORD")
+set_environment_variable("API_KEY", "my-api-key")
+
+======================================================
